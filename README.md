@@ -11,8 +11,10 @@ Main technologies and tools:
 To run the project on localhost, follow the steps:
 - Clone the repository
 - Change AWS Bucket name in the following files:
--   ./src/functions/generateCertificate.ts
--   ./src/functions/verifyCertificate.ts
+```
+./src/functions/generateCertificate.ts
+./src/functions/verifyCertificate.ts
+```
 - Install dependencies with ```yarn```
 - Run DynamoDB with ```yarn dynamo:start```
 - Run project with ```yarn dev```
