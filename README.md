@@ -10,10 +10,18 @@ Main technologies and tools:
 
 To run the project on localhost, follow the steps:
 - Clone the repository
+- Configure your AWS credentials:
+```
+serverless config credentials --provider aws --key=<YOUR_AWS_KEY> --secret <YOUR_AWS_SECRET>
+```
 - Change AWS Bucket name in the following files:
 ```
 ./src/functions/generateCertificate.ts
 ./src/functions/verifyCertificate.ts
+```
+- Install DynamoDB using serverless framework
+```
+serverless dynamodb install
 ```
 - Install dependencies with ```yarn```
 - Run DynamoDB with ```yarn dynamo:start```
