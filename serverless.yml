@@ -46,7 +46,7 @@ functions:
         Action:
           - dynamodb:Query
           - dynamodb:PutItem
-        Resouce: "arn:aws:dynamodb:${self.provider.region}:*:table/users_certificates"
+        Resource: "arn:aws:dynamodb:${self.provider.region}:*:table/users_certificates"
   verifyCertificate:
       handler: src/functions/verifyCertificate.handle
       events:
@@ -58,7 +58,7 @@ functions:
       - Effect: Allow
         Action:
           - dynamodb:Query
-        Resouce: "arn:aws:dynamodb:${self.provider.region}:*:table/users_certificates"
+        Resource: "arn:aws:dynamodb:${self.provider.region}:*:table/users_certificates"
 
 resources:
   Resources:
